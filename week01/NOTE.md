@@ -1,49 +1,58 @@
 # 本周概要
 
+
+
 ##  git使用
 
-- Rancher 的 DNS 应该解析为 4 层负载均衡器
-- 负载均衡器应将端口 TCP/80 和 TCP/443 流量转发到 Kubernetes 集群中的所有 3 个节点。
-- Ingress 控制器会将 HTTP 重定向到 HTTPS，并在端口 TCP/443 上终止 SSL/TLS。
-- 详见  **git_basic_manual.md**
-- **由于没有使用过git，因此对git命令认知有限，还望多推荐列表中未列出来的基本命令。**
+- 学习了git的基本概念，分为工作区、暂存区、版本库、远程仓库
+
+- 学习了git的基本安装配置（windows和github的配置）
+
+- 学习了git的基本使用命令（详见**git基本使用命令.md**，持续积累）
+
+  **反思：由于工作中使用svn作为版本控制因此对git不熟练，后续还需多使用git并持续总结git常见命令等**
 
 
 
 ##  python安装
 
-- Rancher 的 DNS 应该解析为 4 层负载均衡器
-- 负载均衡器应将端口 TCP/80 和 TCP/443 流量转发到 Kubernetes 集群中的所有 3 个节点。
-- Ingress 控制器会将 HTTP 重定向到 HTTPS，并在端口 TCP/443 上终止 SSL/TLS。
+- 学习了不同版本之间的配置、虚拟环境
+
+  **反思：原来pip装包可以将镜像源配入配置文件中（之前每装包都手动指定）**
 
 
 
-##  python版本对比
+##  python数据类型
 
-- Rancher 的 DNS 应该解析为 4 层负载均衡器
-- 负载均衡器应将端口 TCP/80 和 TCP/443 流量转发到 Kubernetes 集群中的所有 3 个节点。
-- Ingress 控制器会将 HTTP 重定向到 HTTPS，并在端口 TCP/443 上终止 SSL/TLS。
-
-
-
-##  python容器使用
-
-- Rancher 的 DNS 应该解析为 4 层负载均衡器
-- 负载均衡器应将端口 TCP/80 和 TCP/443 流量转发到 Kubernetes 集群中的所有 3 个节点。
-- Ingress 控制器会将 HTTP 重定向到 HTTPS，并在端口 TCP/443 上终止 SSL/TLS。
+- 基本数据类型
+- 常用的高级数据类型
+- 详见 **常用数据类型.xmind** 文件，持续积累
 
 
+
+##  python常用模块
+
+- **time/datetime    时间日期模块**
+- **log    日志模块**
+- **os/pathlib    路径模块**
+
+- **re    标准正则模块**
+
+  详见**常用模块.xmind**文件，持续积累
+
+  
 
 ##  python实现daemon
 
-- Rancher 的 DNS 应该解析为 4 层负载均衡器
-- 负载均衡器应将端口 TCP/80 和 TCP/443 流量转发到 Kubernetes 集群中的所有 3 个节点。
-- Ingress 控制器会将 HTTP 重定向到 HTTPS，并在端口 TCP/443 上终止 SSL/TLS。
+1. 调用umask将文件模式创建屏蔽字设置为一个已知值（通常是0）；
+2. 调用fork然后使父进程exit
+3. 调用setsid创建一个新会话。
+4. 成为新会话的首进程
+5. 成为一个新进程组的组长进程
+6. 没有控制终端
+7. 将当前目录更改为根目录。
+8. 关闭不再需要的文件描述符。
 
+**反思：1. 如何结束该daemon呢？**
 
-
-##  python正则模块练习
-
-- Rancher 的 DNS 应该解析为 4 层负载均衡器
-- 负载均衡器应将端口 TCP/80 和 TCP/443 流量转发到 Kubernetes 集群中的所有 3 个节点。
-- Ingress 控制器会将 HTTP 重定向到 HTTPS，并在端口 TCP/443 上终止 SSL/TLS。
+**反思：2. nohup、supervisor、和daemon有何区别？**
